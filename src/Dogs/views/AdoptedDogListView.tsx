@@ -1,4 +1,12 @@
 import * as React from "react";
+import { Header } from "../atoms/Header";
+import { Title } from "../atoms/Title";
+import { DogItemWrapper } from "../atoms/DogItemWrapper";
+import { DogItemCard } from "../atoms/DogItemCard";
+import { DogPicture } from "../atoms/DogPicture";
+import { DogInfo } from "../atoms/DogInfo";
+import { DogName } from "../atoms/DogName";
+import { DogDescription } from "../atoms/DogDescription";
 import { IDogService } from "../services/DogService";
 import { IDog } from "../models/Dog";
 import { AdoptedDogListContainer } from "../atoms/AdoptedDogListContainer";
@@ -16,10 +24,22 @@ export const AdoptedDogListViewFactory = (dogService: IDogService) => {
 
     return (
       <AdoptedDogListContainer>
-        <h2>Your companions!</h2>
+        <Header>
+          <Title>Your companions!</Title>
+        </Header>
         <div>
           {adoptions.map((dog: IDog) => (
-            <div key={dog.id}>{dog.breed}</div>
+            <DogItemWrapper key={dog.id}>
+              <DogItemCard>
+                <DogPicture alt={`${dog.breed}`} src={dog.imgUrl} />
+                <DogInfo>
+                  <DogName>{dog.breed}</DogName>
+                  <DogDescription>
+                    {dog.age} years old - {dog.size}
+                  </DogDescription>
+                </DogInfo>
+              </DogItemCard>
+            </DogItemWrapper>
           ))}
         </div>
       </AdoptedDogListContainer>

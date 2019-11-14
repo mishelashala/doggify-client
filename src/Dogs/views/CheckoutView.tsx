@@ -2,25 +2,13 @@ import * as React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import * as units from "../styles/units";
 import { Button, ButtonVariantTypes } from "../atoms/Button";
+import { MainContainer } from "../atoms/MainContainer";
+import { Title } from "../atoms/Title";
+import { Header } from "../atoms/Header";
 import * as dogDuck from "../ducks/Dog.duck";
 import { IDog } from "../models/Dog";
 import { IDogService, DogServiceError } from "../services/DogService";
-
-export const CheckoutViewContainer = styled.section`
-  margin: 0 auto;
-  width: ${units.MIN_DESKTOP_WIDTH}px;
-`;
-
-export const Title = styled.h2`
-  font-family: arial;
-  margin: 0;
-`;
-
-export const Header = styled.header`
-  padding: 1rem 0;
-`;
 
 const DogDetailPicture = styled.img`
   display: inline-block
@@ -71,7 +59,7 @@ export const CheckoutViewFactory = (dogService: IDogService) => {
     };
 
     return (
-      <CheckoutViewContainer>
+      <MainContainer>
         <Header>
           <Title>Your new friends!</Title>
         </Header>
@@ -100,7 +88,7 @@ export const CheckoutViewFactory = (dogService: IDogService) => {
 
           <Button onClick={handleClickSubmit}>SUBMIT ADOPTION</Button>
         </div>
-      </CheckoutViewContainer>
+      </MainContainer>
     );
   };
 
