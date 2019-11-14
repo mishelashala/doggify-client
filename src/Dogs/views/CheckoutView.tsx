@@ -9,28 +9,9 @@ import { Header } from "../atoms/Header";
 import * as dogDuck from "../ducks/Dog.duck";
 import { IDog } from "../models/Dog";
 import { IDogService, DogServiceError } from "../services/DogService";
-
-const DogDetailPicture = styled.img`
-  display: inline-block
-  height: 8rem;
-  object-fit: cover;
-  vertical-align: middle;
-  width: 8rem;
-`;
-
-export const DogDetailItem = styled.div`
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0;
-`;
-
-export const DogDetailInfo = styled.div`
-  display: inline-block;
-  margin-left: 1rem;
-  vertical-align: middle;
-`;
+import { DogDetailPicture } from "../atoms/DogDetailPicture";
+import { DogDetailItem } from "../atoms/DogDetailItem";
+import { DogDetailInfo } from "../atoms/DogDetailInfo";
 
 export const CheckoutViewFactory = (dogService: IDogService) => {
   const CheckoutView: React.FC = () => {
