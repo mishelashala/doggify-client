@@ -5,7 +5,7 @@ import { DogItem } from "../components/DogItem";
 import { DogList } from "../atoms/DogList";
 import { MainContainer } from "../atoms/MainContainer";
 import { When } from "../components/When";
-import * as dogDuck from "../ducks/Dog.duck";
+import * as dogDuck from "../ducks/Dog";
 
 export const DogListViewFactory = (dogService: IDogService) => {
   const DogListView = () => {

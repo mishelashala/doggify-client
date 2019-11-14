@@ -8,7 +8,7 @@ import { DogPicture } from "../atoms/DogPicture";
 import { DogDescription } from "../atoms/DogDescription";
 import { DogInfo } from "../atoms/DogInfo";
 import { Button } from "../atoms/Button";
-import * as dogDuck from "../ducks/Dog.duck";
+import * as dogDuck from "../ducks/Dog";
 
 export interface IDogItemProps {
   dog: IDog;

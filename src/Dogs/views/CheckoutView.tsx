@@ -5,7 +5,7 @@ import { Button, ButtonVariantTypes } from "../atoms/Button";
 import { MainContainer } from "../atoms/MainContainer";
 import { Title } from "../atoms/Title";
 import { Header } from "../atoms/Header";
-import * as dogDuck from "../ducks/Dog.duck";
+import * as dogDuck from "../ducks/Dog";
 import { IDog } from "../models/Dog";
 import { IDogService, DogServiceError } from "../services/DogService";
 import { DogDetailPicture } from "../atoms/DogDetailPicture";

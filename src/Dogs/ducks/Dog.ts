@@ -56,7 +56,7 @@ export interface IAppState {
 }
 
 export interface IFluxStandardAction {
-  payload: any;
+  payload?: any;
   type: string;
   error?: boolean;
 }
@@ -94,6 +94,12 @@ export const dogReducer = (
       return {
         ...state,
         isLoading: true
+      };
+
+    case FETCH_DOG_LIST_FAIL:
+      return {
+        ...state,
+        isLoading: false
       };
 
     case FETCH_DOG_LIST_SUCCESS:

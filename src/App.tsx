@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { DogsRouter } from "./Dogs/Router";
-import { dogReducer, initialState } from "./Dogs/ducks/Dog.duck";
+import { dogReducer, initialState } from "./Dogs/ducks/Dog";
 
 const store = createStore(dogReducer, initialState());
 
