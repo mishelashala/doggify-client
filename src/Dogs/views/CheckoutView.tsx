@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { Button, ButtonVariantTypes } from "../atoms/Button";
 import { MainContainer } from "../atoms/MainContainer";
 import { Title } from "../atoms/Title";
