@@ -30,7 +30,7 @@ export const CheckoutViewFactory = (dogService: IDogService) => {
     const handleClickSubmit = async () => {
       try {
         await dogService.adoptMany(dogs);
-        history.replace("/dogs/adoptions");
+        history.replace("/dogs/adopted");
       } catch (err) {
         if (err.message === DogServiceError.EMPTY_DOG_LIST) {
           alert("Cannot checkout an empty basket!");
